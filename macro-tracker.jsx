@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useMemo } from "react";
+const { useState, useEffect, useRef, useMemo } = React;
 
 // ── CONSTANTS ────────────────────────────────────────────────────────────────
 const GOALS = { calories: 1900, protein: 178, carbs: 162, fat: 58, water: 5500 };
@@ -543,7 +543,7 @@ function WeeklyView({ data, goals }) {
 }
 
 // ── MAIN APP ─────────────────────────────────────────────────────────────────
-export default function MacroTracker() {
+function MacroTracker() {
   const { data, goals, saveDay, saveGoals } = useStorage();
   const [currentDate, setCurrentDate] = useState(today());
   const [view, setView] = useState("day"); // day | week | goals
